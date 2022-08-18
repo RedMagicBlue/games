@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <title>RedMagicBlue Games - Indie game studio: Let's play art games! </title><meta charset="utf-8" />       
+    <meta name="description" content="Play art games by RedMagicBlue directly online in the browser on your Smartphone,  Tablet,  Laptop or Desktop PC." />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="author" content="RedMagicBlue">
+    <meta property="og:image" content="/images/redmagicblue.png" />
+    <link rel="icon" type="image/png" href="./images/redmagicblue.png" />
+    <script src="assets/engine.js"></script>
+    <script src="assets/physics.js"></script>
+    <script src="assets/extras.js"></script>
+    <script src="assets/environment.js"></script>
+    <script src="assets/gif.js"></script>
+    <script src="assets/teleport.js"></script>
+    <script src="assets/event.js"></script>
+    <script src="assets/sound.js"></script>
+
+<style>
+.a-dialog-allow-button {
+  background-color: #00ffff;
+}
+
+.a-dialog-deny-button {
+  background-color: white;
+}
+
+.a-dialog-ok-button {
+   background-color: black;
+ }
+</style>
+
+</head>
+
+
+  <body>
+
+<a-scene physics="debug: true" loading-screen="dotsColor: #00ffff; backgroundColor: black" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true" antialias="true" cursor="rayOrigin: mouse">
+
+<!-- World -->
+
+<a-entity id="environment" environment="preset: tron; dressingAmount: 500; dressingColor: #00ffff;  gridColor: #00ffff;"></a-entity>
+
+<!-- Sound -->
+
+    <audio id="music01" src="assets/01.mp3" crossorigin="anonymous"></audio>
+    <audio id="music02" src="assets/02.mp3" crossorigin="anonymous"></audio>
+    <audio id="music03" src="assets/03.mp3" crossorigin="anonymous"></audio>
+    <audio id="music04" src="assets/04.mp3" crossorigin="anonymous"></audio>
+    <audio id="music05" src="assets/05.mp3" crossorigin="anonymous"></audio>
+    <audio id="music06" src="assets/06.mp3" crossorigin="anonymous"></audio>
+    <audio id="music07" src="assets/07.mp3" crossorigin="anonymous"></audio>
+    <audio id="music08" src="assets/08.mp3" crossorigin="anonymous"></audio>
+    <audio id="music09" src="assets/09.mp3" crossorigin="anonymous"></audio>
+
+<script>
+document.addEventListener("click", function () {
+  document.querySelector("a-text").setAttribute("visible", false);
+});
+
+function playing(index) {
+  console.log("now playing", index);
+  document.querySelector("#player").setAttribute("visible", true);
+}
+</script>
+
+<!-- Camera -->
+
+<a-entity id="rig" position="1 0 -14" movement-controls kinematic-body look-controls="pointerLockEnabled:true;">
+<a-entity id="camera" camera position="0 1.6 0" cursor-visible="true">
+
+<a-cursor position="0 0 -.05" color="red" scale=".03 .03 1"></a-cursor>
+</a-entity>
+</a-entity>
+
+<!-- Objects -->
+
+
+<!-- Welcome to RedMagicBlue Games - Independent game studio.  Let's play art games! -->
+<a-entity id="box1" sound="src: #music01; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-8.33499 2 0.44742" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 0 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Video games - Beautiful video games in high resolution up to 4K. -->
+<a-entity id="box2" sound="src: #music02; on: click;"  scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-13.13495 2 -5.5234" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 0 360 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>     
+
+<!-- Play your story - Creative gameplays from sketch to development and publishing. -->
+<a-entity id="box3" sound="src: #music03; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-5.70 2 12.198"  geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Art games - Serious topics for serious players based on true stories. -->
+<a-entity id="box4" sound="src: #music04; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="6.118 2 -0.968" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 0 360 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Powerful web VR,  web XR - Immersive VR experiences for everyone. -->
+<a-entity id="box5" sound="src: #music05; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="12.87 2 -3.914" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Multiplatform - HTML5 Games for Android,  iOS,  Linux,  Mac and PC. -->
+<a-entity id="box6" sound="src: #music06; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-14.40479 2 13.09522" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 0 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Let's play!  Amazing games made with love in Europe,  Italy. -->
+<a-entity id="box7" sound="src: #music07; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="-1.79 2 -4.128" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 0 360 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- Avant-garde Art games - Play art games by RedMagicBlue directly online in the browser on your Smartphone, Tablet, Laptop or Desktop PC. -->
+<a-entity id="box8" sound="src: #music08; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="2.275 2 5.160" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 360 0; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+<!-- RedMagicBlue - Let's play Art games! -->
+<a-entity id="box9" sound="src: #music09; on: click;" scale="1.5 1.5 1.5" rotation="0 0 0" static-body position="4.774 2 15.187" geometry="" material="src:url(images/redmagicblue.png);" animation="property: rotation; to: 360 0 360; loop: true; easing: linear; dur: 10000"> 
+</a-entity>
+
+
+<!-- Logo -->
+
+<a-plane width="2" height="2" position="0 2 -19" material="src: images/pc.png; transparent: true" shadow="" geometry="" rotation="0 0 0"></a-plane>
+<a-plane width="2" height="2" position="1.965 2 -19" material="src: images/mobile.png; transparent: true" shadow="" geometry="" rotation="0 0 0"></a-plane>
+
+<!-- Wall -->
+
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 0 0" scale="60 20 2" position="0 0 21.0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 -90 0" scale="60 20 2" position="20 0 0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="0 -90 0" scale="60 20 2" position="-18 0 0"></a-box>
+<a-box static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" otation="0 0 0" scale="60 20 2" position="0 0 -15"></a-box>
+
+<!-- Floor -->
+
+<a-plane static-body material="opacity: 0.0; transparent: true" width="1000" height="1000" rotation="-90 0 0" position="0 0 0"></a-plane>
+ 
+</a-scene>
+
+  </body>
+</html>
+
+
+
+
+
+
