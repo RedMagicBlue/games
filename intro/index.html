@@ -35,7 +35,7 @@
 
   <body>
 
-<a-scene physics="debug: true" loading-screen="dotsColor: #00ffff; backgroundColor: black" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true" antialias="true" cursor="rayOrigin: mouse">
+<a-scene physics="debug: false" loading-screen="dotsColor: #00ffff; backgroundColor: black" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: true" antialias="true" cursor="rayOrigin: mouse">
 
 <!-- World -->
 
@@ -66,7 +66,7 @@ function playing(index) {
 
 <!-- Camera -->
 
-<a-entity id="rig" position="1 0 -14" movement-controls kinematic-body look-controls="pointerLockEnabled:true;">
+<a-entity id="rig" position="1 0 -14" rotation="0 0 180" movement-controls kinematic-body look-controls="pointerLockEnabled:true;">
 <a-entity id="camera" camera position="0 1.6 0" cursor-visible="true">
 
 <a-cursor position="0 0 -.05" color="red" scale=".03 .03 1"></a-cursor>
